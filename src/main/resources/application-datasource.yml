@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    druid:
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      validationQuery: select 1
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: root
+    password: 123456
+    driverClassName: org.h2.Driver
